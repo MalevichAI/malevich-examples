@@ -1,0 +1,69 @@
+dependencies:
+- drives:
+    installer: space
+    options:
+      branch: 1cd87435fdc94c6891a862e57a8f340b
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/drives:28bae485dcd5287e318371b6e58d10fe5010a7db
+      reverse_id: drives
+      version: 7dcbec80603044c3b8b5e15f72ccb0ec
+    package_id: drives
+    version: 0.1.0
+- openai:
+    installer: space
+    options:
+      branch: 8cc57b2eb36a493cae26532ec1a1d790
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/openai_api:64b21a41a29425856cc29739a9aca8c4b65363ce
+      reverse_id: openai
+      version: d1b4a4cd695d44ed85b2948754394beb
+    package_id: openai
+    version: 64b2
+- translate:
+    installer: space
+    options:
+      branch: 359e1bd9c5574879958cb5a13b936a08
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/translate:latest
+      reverse_id: translate
+      version: e9929d725c1744cc85ed1fed47022c68
+    package_id: translate
+    version: 0.1.0
+- tts:
+    installer: space
+    options:
+      branch: 77068464e3f5472984829268b34ae587
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/tts:28bae485dcd5287e318371b6e58d10fe5010a7db
+      reverse_id: tts
+      version: 3825b53104784b90a70742f05f60c519
+    package_id: tts
+    version: 0.1.0
+- ultralytics:
+    installer: space
+    options:
+      branch: 90ed9a0af5a94e619e5a10af9ca67251
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/ultralytics
+      reverse_id: ultralytics
+      version: fbbbcf87a0204b4a869a9ee2a69a5e66
+    package_id: ultralytics
+    version: 0.0.1
+- utility:
+    installer: space
+    options:
+      branch: 02b81bbe0e6449679c570ef192f69047
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/utility:397cde25d122278c0c808b0f634ced97d5d8d097
+      reverse_id: utility
+      version: 3486448b66414b22b52a8022f3a4b91f
+    package_id: utility
+    version: 0.2.0
+project_id: null
+version: null
