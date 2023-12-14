@@ -1,0 +1,48 @@
+dependencies:
+- utility:
+    installer: space
+    options:
+      branch: 02b81bbe0e6449679c570ef192f69047
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/utility:397cde25d122278c0c808b0f634ced97d5d8d097
+      reverse_id: utility
+      version: 3486448b66414b22b52a8022f3a4b91f
+    package_id: utility
+    version: 0.2.0
+- scrape:
+    installer: space
+    options:
+      branch: 8845ef6dfd8e4b30b59cd512cc07c099
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/scrape@sha256:923649361d75e0bddcbfb167a3c8f484168ecdf251a2eba6f6cb2f0a1d62fdf2
+      reverse_id: scrape
+      version: 2de095acef25481c94f9099c5d2791fc
+    package_id: scrape
+    version: c4dc
+- openai:
+    installer: space
+    options:
+      branch: 8cc57b2eb36a493cae26532ec1a1d790
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/openai_api:1bde248fe032c8259b12ea4e67110ca03680f32e
+      reverse_id: openai
+      version: 021869370d0e437a944b670e78f1ecd3
+    package_id: openai
+    version: 1bde
+project_id: null
+space:
+  api_gateway_path: /e
+  api_url: https://dev.api.malevich.ai/
+  auth_path: api/v1/login/access-token
+  graphql_path: api/v1/graphql
+  host:
+    alias: null
+    conn_url: https://core.malevich.ai/
+  org: null
+  password: secret#250304
+  token: null
+  username: zak@malevich.ai
+version: null
