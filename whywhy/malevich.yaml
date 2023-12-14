@@ -1,0 +1,17 @@
+dependencies:
+- whywhy:
+    installer: image
+    options:
+      checksum: e654ad8c5a7aa6c69d3807a429cdfba0947692ee3c5d7f3ee17c62a8d7fa6dab
+      core_auth_token: null
+      core_auth_user: null
+      core_host: https://core.malevich.ai/
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: teexone/malevich:whywhy
+      operations: null
+    package_id: whywhy
+    version: ''
+project_id: null
+space: null
+version: null

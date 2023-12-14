@@ -1,0 +1,12 @@
+spacy
+spacytextblob
+
+google-api-python-client
+
+numpy
+pandas
+
+goose3
+wheel
+
+feedparser~=6.0.10

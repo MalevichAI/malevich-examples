@@ -1,0 +1,19 @@
+whywhy:
+  name: "whywhy newletter v3 short"
+  description: "News analysis pipeline that fetches the articles from the RSS feeds and sends brief summary with top sentences that match specific criteria"
+  designed_for_use_case:
+    - title: Send an email with recent news summary that matches specific criteria
+      body: Summarise recent news articles matching specific factuality/sentiment criteria and send the report by email
+  not_designed_for_use_case:
+    - title: List most recent articles from the RSS feed
+      body: Parse RSS feed URL to retrieve the list with the most recent news articles from it
+    - title: Determine the subjectivity of the news article
+      body: Accept news article sentences, apply this component and get subjectivity scores for every sentence
+    - title: Determine the sentiment of the news article
+      body: Accept news article sentences, apply this component and get the sentiment scores for every sentence
+   visibility:
+    - public
+  app:
+    container_ref: public.ecr.aws/u6e1k0c7/whywhy:latest
+    container_user: null
+    container_token: null
