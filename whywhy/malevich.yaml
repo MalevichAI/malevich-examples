@@ -8,7 +8,7 @@ dependencies:
       core_host: https://core.malevich.ai/
       image_auth_pass: null
       image_auth_user: null
-      image_ref: teexone/malevich:whywhy
+      image_ref: public.ecr.aws/u6e1k0c7/whywhy:latest
       operations: null
     package_id: whywhy
     version: ''
