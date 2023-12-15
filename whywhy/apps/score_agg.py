@@ -5,6 +5,10 @@ from malevich.square import Context, processor
 
 @processor()
 def score_article(context: Context, fo_label, sentiment_label):
+    """
+    Filter article sentences by their labels
+    """
+
     app_cfg = context.app_cfg
     only_facts = bool(app_cfg.get("only_facts", False))
     only_opinions = bool(app_cfg.get("only_opinions", False))

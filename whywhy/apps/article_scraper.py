@@ -6,6 +6,10 @@ from malevich.square import processor
 
 @processor()
 def get_article_body_with_url(docs):
+    """
+    Scrape article content from url
+    """
+
     g = Goose()
     ids = []
     titles = []

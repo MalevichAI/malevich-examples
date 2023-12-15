@@ -6,6 +6,9 @@ from malevich.square import Context, processor
 
 @processor()
 def get_article_url_from_rss(docs, context: Context):
+    """
+    Parse RSS feed and retrieve a list of article links
+    """
     app_cfg = context.app_cfg
     article_limit = app_cfg.get("article_count_limit", 10)
     urls = []
