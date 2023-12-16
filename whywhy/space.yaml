@@ -4,6 +4,8 @@ whywhy.tools:
   icon: component/examples/whywhy.png
   tags:
     - Examples
+    - News
+    - NLP
   designed_for_use_case:
     - title: Process RSS feeds & retrieve article URL
     - title: Process news article URL & retrieve article content
