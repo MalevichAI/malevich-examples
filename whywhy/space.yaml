@@ -6,6 +6,8 @@ whywhy.tools:
     - Examples
     - News
     - NLP
+  visibility:
+    - public
   designed_for_use_case:
     - title: Process RSS feeds & retrieve article URL
     - title: Process news article URL & retrieve article content
@@ -16,8 +18,6 @@ whywhy.tools:
   not_designed_for_use_case:
     - title: LLM-based news article processing
     - title: High-load newsletter send-out
-  visibility:
-    - public
   app:
     container_ref: public.ecr.aws/u6e1k0c7/whywhy:latest
     container_user: null
