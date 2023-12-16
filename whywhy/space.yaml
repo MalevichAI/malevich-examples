@@ -1,7 +1,7 @@
 whywhy.tools:
   name: "whywhy tools"
   description: Simple ML-based tools to work with news content
-  icon: components/examples/whywhy.png
+  icon: component/examples/whywhy.png
   tags:
     - Examples
   designed_for_use_case:
