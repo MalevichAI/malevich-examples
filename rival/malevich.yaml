@@ -2,36 +2,47 @@ dependencies:
 - utility:
     installer: space
     options:
-      branch: 02b81bbe0e6449679c570ef192f69047
+      branch: 08d6f70d9dbe4abe83740ece4685cbd4
       image_auth_pass: null
       image_auth_user: null
-      image_ref: public.ecr.aws/u6e1k0c7/utility:397cde25d122278c0c808b0f634ced97d5d8d097
+      image_ref: public.ecr.aws/u6e1k0c7/utility:5eb2bdd2cb9d8bd1f421238150fe330f417d28a4
       reverse_id: utility
-      version: 3486448b66414b22b52a8022f3a4b91f
+      version: 2b4bde1c65e541399a43462fa1766944
     package_id: utility
-    version: 0.2.0
-- scrape:
-    installer: space
-    options:
-      branch: 8845ef6dfd8e4b30b59cd512cc07c099
-      image_auth_pass: null
-      image_auth_user: null
-      image_ref: public.ecr.aws/u6e1k0c7/scrape@sha256:923649361d75e0bddcbfb167a3c8f484168ecdf251a2eba6f6cb2f0a1d62fdf2
-      reverse_id: scrape
-      version: 2de095acef25481c94f9099c5d2791fc
-    package_id: scrape
-    version: c4dc
+    version: 5eb2
 - openai:
     installer: space
     options:
-      branch: 8cc57b2eb36a493cae26532ec1a1d790
+      branch: e189e48002fc4e2c9b70ddc69cc0ebec
       image_auth_pass: null
       image_auth_user: null
-      image_ref: public.ecr.aws/u6e1k0c7/openai_api:1bde248fe032c8259b12ea4e67110ca03680f32e
+      image_ref: public.ecr.aws/u6e1k0c7/openai_api:5eb2bdd2cb9d8bd1f421238150fe330f417d28a4
       reverse_id: openai
-      version: 021869370d0e437a944b670e78f1ecd3
+      version: 977fc6b929cd458fb00f96d2b769c903
     package_id: openai
-    version: 1bde
+    version: 5eb2
+- scrape:
+    installer: space
+    options:
+      branch: 3e78c50db2624afeb76bc8e505501806
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/scrape:e155c9b2bfb15ee7f0a0c0f4574f0f55fcd1eec9
+      reverse_id: scrape
+      version: 96907f1a70824964b04a13b34c752d8a
+    package_id: scrape
+    version: e155
+preferences:
+  log_format: RICH
+  log_level: INFO
+  verbosity:
+    Installation: 0
+    Intrepretation: 0
+    Preparation: 1
+    Removal: 0
+    Results: 1
+    Run: 1
+    Stop: 0
 project_id: null
 space:
   api_gateway_path: /e
@@ -41,8 +52,8 @@ space:
   host:
     alias: null
     conn_url: https://core.malevich.ai/
-  org: null
-  password: secret#250304
+  org: examples
+  password: secret#500400
   token: null
   username: zak@malevich.ai
 version: null

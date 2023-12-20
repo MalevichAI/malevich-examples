@@ -7,7 +7,6 @@ from malevich import flow, collection, config
 from malevich.interpreter.space import SpaceInterpreter
 from malevich.interpreter.core import CoreInterpreter
 
-
 @flow(
     reverse_id='rival-get-queries',
     name="Get Queries",
@@ -40,10 +39,10 @@ def get_queries(
     name="LLM Demand Analysis",
 )
 def rival(
-    queries: pd.DataFrame,
-    company: pd.DataFrame,
-    clear_prompt: str,
-    decide_prompt: str,
+    queries: pd.DataFrame = pd.read_csv('./datasets/queries.csv'),
+    company: pd.DataFrame =  pd.read_csv('./datasets/company.csv'),
+    clear_prompt: str = open('prompts/explain.txt').read(),
+    decide_prompt: str = open('prompts/decide.txt').read(),
 ):
     """Analyzes demands using a power of LLM models"""
     
@@ -55,12 +54,12 @@ def rival(
     links = scrape_web(
         queries_collection,
         config(
-            max_results=0,
-            max_depth=6,
+            max_results=10,
+            max_depth=1,
             timeout=50,
             spider='google',
             spider_cfg=config(
-                scrape_api_key="",
+                scrape_api_key="00ca37449592cc3e41cb5c1e4094ff83",
             )
         )
     
@@ -130,10 +129,8 @@ def rival(
     
 
 if __name__ == '__main__':
-    # interpreter = SpaceInterpreter()
-    interpreter = CoreInterpreter(
-        ...
-    )
+    interpreter = SpaceInterpreter()
+    
 
     f = rival(
         pd.read_csv('./datasets/queries.csv'),
@@ -143,8 +140,13 @@ if __name__ == '__main__':
     )
     
     f.interpret(interpreter)
+    print("\n\nFlow is updated!!")
     f.prepare()
     f.run(with_logs=True, profile_mode='all')
     f.stop()
-    # print("\n\nFlow is updated!!")
-    f.results().to_csv('results.csv')
+    results = f.results()
+    if isinstance(results, pd.DataFrame):
+        results.to_csv('results.csv')
+    else:
+        for i, r in enumerate(results):
+            r.to_csv(f'results_{i}.csv')

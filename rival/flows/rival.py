@@ -60,7 +60,7 @@ def rival(
             timeout=5,
             spider='google',
             spider_cfg=config(
-                scrape_api_key=...,
+                scrape_api_key=os.getenv("SCRAPE_API_KEY"),
             )
         )
     

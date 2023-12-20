@@ -1,17 +1,37 @@
 dependencies:
 - whywhy:
-    installer: image
+    installer: space
     options:
-      checksum: e654ad8c5a7aa6c69d3807a429cdfba0947692ee3c5d7f3ee17c62a8d7fa6dab
-      core_auth_token: null
-      core_auth_user: null
-      core_host: https://core.malevich.ai/
+      branch: 3f10ef6ab27f421781faf0a5d5d3aa70
       image_auth_pass: null
       image_auth_user: null
-      image_ref: public.ecr.aws/u6e1k0c7/whywhy:latest
-      operations: null
+      image_ref: public.ecr.aws/u6e1k0c7/whywhy:347b5234a84bf6b9109da6e814b1b856e342c0b5
+      reverse_id: whywhy.tools
+      version: 2acb65454c324e218e8cefd6fcfdc0df
     package_id: whywhy
-    version: ''
+    version: 347b
+preferences:
+  log_format: RICH
+  log_level: INFO
+  verbosity:
+    Installation: 0
+    Intrepretation: 0
+    Preparation: 1
+    Removal: 0
+    Results: 1
+    Run: 1
+    Stop: 0
 project_id: null
-space: null
+space:
+  api_gateway_path: /e
+  api_url: https://dev.api.malevich.ai
+  auth_path: /api/v1/login/access-token
+  graphql_path: /api/v1/graphql
+  host:
+    alias: null
+    conn_url: https://core.malevich.ai/
+  org: examples
+  password: secret#958268
+  token: null
+  username: zak@malevich.ai
 version: null

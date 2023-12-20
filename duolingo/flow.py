@@ -4,6 +4,7 @@ import pandas as pd
 import argparse
 
 from malevich import collection, config, flow
+from malevich.interpreter.core import CoreInterpreter
 from malevich.drives import download_from_google_drive
 from malevich.openai import prompt_completion
 from malevich.translate import translate_texts
@@ -98,14 +99,14 @@ def duolingo(
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('link', type=str)
-    parser.add_argument('target_language', type=str)
+    parser.add_argument('--link', type=str, default="https://drive.google.com/file/d/1lhgxgKPeuH5IG7O6wrdvBymNyq6crGIi/view?usp=sharing")
+    parser.add_argument('--target_language', type=str, default="fr")
     args = parser.parse_args()
 
     classes = open(
         os.path.join(
             os.path.dirname(__file__),
-            'misc'
+            'misc',
             'classes.txt'
         )
     ).read().split('\n')
@@ -126,7 +127,9 @@ if __name__ == '__main__':
         prompt=prompt,
     )
 
-    task.interpret()
+    task.interpret(CoreInterpreter(
+        core_auth=('leo', 'pak')
+    ))
 
     task.prepare()
     task.run()

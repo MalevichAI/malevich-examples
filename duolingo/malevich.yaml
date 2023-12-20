@@ -2,68 +2,91 @@ dependencies:
 - drives:
     installer: space
     options:
-      branch: 1cd87435fdc94c6891a862e57a8f340b
+      branch: c3a12495f5554ea5a2dd221ac03d9532
       image_auth_pass: null
       image_auth_user: null
-      image_ref: public.ecr.aws/u6e1k0c7/drives:28bae485dcd5287e318371b6e58d10fe5010a7db
+      image_ref: public.ecr.aws/u6e1k0c7/drives:5934ccd027a38551dbc245b0aedab239a7e1e284
       reverse_id: drives
-      version: 7dcbec80603044c3b8b5e15f72ccb0ec
+      version: 30f557706a824ce19c30f4fea01d3c5f
     package_id: drives
-    version: 0.1.0
+    version: '5934'
 - openai:
     installer: space
     options:
       branch: 8cc57b2eb36a493cae26532ec1a1d790
       image_auth_pass: null
       image_auth_user: null
-      image_ref: public.ecr.aws/u6e1k0c7/openai_api:64b21a41a29425856cc29739a9aca8c4b65363ce
+      image_ref: public.ecr.aws/u6e1k0c7/openai_api:e40d03c654ebdc2fc43feb69a1cf3d86babd1d23
       reverse_id: openai
-      version: d1b4a4cd695d44ed85b2948754394beb
+      version: 6235c536ff444abc9f7d24b069b67f90
     package_id: openai
-    version: 64b2
+    version: e40d
 - translate:
     installer: space
     options:
-      branch: 359e1bd9c5574879958cb5a13b936a08
+      branch: f52ef5199b244e04aadcc79e0c6b1c60
       image_auth_pass: null
       image_auth_user: null
-      image_ref: public.ecr.aws/u6e1k0c7/translate:latest
+      image_ref: public.ecr.aws/u6e1k0c7/translate:e40d03c654ebdc2fc43feb69a1cf3d86babd1d23
       reverse_id: translate
-      version: e9929d725c1744cc85ed1fed47022c68
+      version: 9f17c5ac9c174f738b62c4edad056ad5
     package_id: translate
-    version: 0.1.0
+    version: e40d
 - tts:
     installer: space
     options:
-      branch: 77068464e3f5472984829268b34ae587
+      branch: 433a50b7a6374bfbaa99dc2b5e3fdb7e
       image_auth_pass: null
       image_auth_user: null
-      image_ref: public.ecr.aws/u6e1k0c7/tts:28bae485dcd5287e318371b6e58d10fe5010a7db
+      image_ref: public.ecr.aws/u6e1k0c7/tts:e40d03c654ebdc2fc43feb69a1cf3d86babd1d23
       reverse_id: tts
-      version: 3825b53104784b90a70742f05f60c519
+      version: 828decd13bba4f319606b60fd5ce010b
     package_id: tts
-    version: 0.1.0
+    version: e40d
 - ultralytics:
     installer: space
     options:
-      branch: 90ed9a0af5a94e619e5a10af9ca67251
+      branch: 20bd70334aa8469389c3dbe9a0814723
       image_auth_pass: null
       image_auth_user: null
-      image_ref: public.ecr.aws/u6e1k0c7/ultralytics
+      image_ref: public.ecr.aws/u6e1k0c7/ultralytics:e40d03c654ebdc2fc43feb69a1cf3d86babd1d23
       reverse_id: ultralytics
-      version: fbbbcf87a0204b4a869a9ee2a69a5e66
+      version: aea7b817ded64c3db8e919506c67caa3
     package_id: ultralytics
-    version: 0.0.1
+    version: e40d
 - utility:
     installer: space
     options:
-      branch: 02b81bbe0e6449679c570ef192f69047
+      branch: 5dacb7e7ae004ea188fa5a256cd36606
       image_auth_pass: null
       image_auth_user: null
-      image_ref: public.ecr.aws/u6e1k0c7/utility:397cde25d122278c0c808b0f634ced97d5d8d097
+      image_ref: public.ecr.aws/u6e1k0c7/utility:e40d03c654ebdc2fc43feb69a1cf3d86babd1d23
       reverse_id: utility
-      version: 3486448b66414b22b52a8022f3a4b91f
+      version: 203ff54a0ed24ea2abf83b90154c27a5
     package_id: utility
-    version: 0.2.0
+    version: e40d
+preferences:
+  log_format: RICH
+  log_level: INFO
+  verbosity:
+    Installation: 0
+    Intrepretation: 0
+    Preparation: 1
+    Removal: 0
+    Results: 1
+    Run: 1
+    Stop: 0
 project_id: null
+space:
+  api_gateway_path: /e
+  api_url: https://dev.api.malevich.ai
+  auth_path: /api/v1/login/access-token
+  graphql_path: /api/v1/graphql
+  host:
+    alias: null
+    conn_url: https://core.malevich.ai/
+  org: examples
+  password: secret#206956
+  token: null
+  username: zak@malevich.ai
 version: null
