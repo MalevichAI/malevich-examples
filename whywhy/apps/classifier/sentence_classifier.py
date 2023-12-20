@@ -1,15 +1,25 @@
 import sys
 import subprocess
 
-from malevich.square import Context, processor
+import spacy
+
+from malevich.square import Context, processor, init
 
 from .tools import SentenceClassifier, BestSentenceClassifier
 
 
+@init()
+def ensure_spacy(ctx: Context):
+    """Ensure spaCy asset is loaded"""
+    spacy.cli.download("en_core_web_sm")
+
+
 @processor()
 def sentence_classifier(docs, context: Context):
+    """
+    Demo sentence classifier using spaCy package
+    """
     app_cfg = context.app_cfg
-    subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
     model = app_cfg["model"]
     if model in ["fo", "sentiment"]:
         sentence_classifier = SentenceClassifier(

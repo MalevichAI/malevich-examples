@@ -10,8 +10,9 @@ from malevich.square import processor
 
 @processor()
 def split_article_to_sentence(docs):
-    subprocess.check_call(
-        [sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+    """
+    Split article content into sentences with spaCy
+    """
     nlp = spacy.load("en_core_web_sm")
     out = []
     for _, row in docs.iterrows():

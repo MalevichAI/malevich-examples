@@ -2,9 +2,18 @@ name: Malevich Manual CI
 on:
   workflow_dispatch:
     inputs:
+      build:
+        description: 'Build images'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+        - 'true'
+        - 'false'
       branch:
         description: 'On which branch to run'
         required: true
+    
 jobs:
   build_push:
     environment: ${{ inputs.branch }}

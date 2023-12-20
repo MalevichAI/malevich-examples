@@ -5,6 +5,9 @@ from .smtp_sender import SmtpSender
 
 @processor()
 def send_newsletter(recipients, articles, context: Context):
+    """
+    Send email with SmptpSender
+    """
     app_cfg = context.app_cfg
     sender = SmtpSender(app_cfg["login"], app_cfg["password"])
     top_n = app_cfg.get("top_n", 5)

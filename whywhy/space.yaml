@@ -1,8 +1,23 @@
-whywhy:
-  name: WhyWhy newletter v3 short
-  description: News analysis pipeline that fetches the articles from the RSS feeds and sends brief summary with top sentences that match specific criteria
+whywhy.tools:
+  name: "whywhy tools"
+  description: Simple ML-based tools to work with news content
+  icon: component/examples/whywhy.png
+  tags:
+    - Examples
+    - News
+    - NLP
   visibility:
     - public
+  designed_for_use_case:
+    - title: Process RSS feeds & retrieve article URL
+    - title: Process news article URL & retrieve article content
+    - title: Split article content into sentences
+    - title: Apply sentence-level sentiment classifier
+    - title: Apply sentence-level bias classifier
+    - title: Filter news article content based on classifier outputs
+  not_designed_for_use_case:
+    - title: LLM-based news article processing
+    - title: High-load newsletter send-out
   app:
     container_ref: public.ecr.aws/u6e1k0c7/whywhy:71976f0395842a85b53b685079e52aec95eeb765
     container_user: null
