@@ -1,0 +1,59 @@
+dependencies:
+- openai:
+    installer: space
+    options:
+      branch: 8cc57b2eb36a493cae26532ec1a1d790
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/openai_api:e40d03c654ebdc2fc43feb69a1cf3d86babd1d23
+      reverse_id: openai
+      version: 6235c536ff444abc9f7d24b069b67f90
+    package_id: openai
+    version: e40d
+- scrape:
+    installer: space
+    options:
+      branch: 8845ef6dfd8e4b30b59cd512cc07c099
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/scrape:88a4741d999aa5556f878495c24bf44860312acd
+      reverse_id: scrape
+      version: 85520a83b5ea4393aebeaa645f5b72b0
+    package_id: scrape
+    version: '5934'
+- utility:
+    installer: space
+    options:
+      branch: 5dacb7e7ae004ea188fa5a256cd36606
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/u6e1k0c7/utility:e40d03c654ebdc2fc43feb69a1cf3d86babd1d23
+      reverse_id: utility
+      version: 203ff54a0ed24ea2abf83b90154c27a5
+    package_id: utility
+    version: e40d
+preferences:
+  log_format: RICH
+  log_level: INFO
+  verbosity:
+    Installation: 0
+    Intrepretation: 0
+    Preparation: 1
+    Removal: 0
+    Results: 1
+    Run: 1
+    Stop: 0
+project_id: null
+space:
+  api_gateway_path: /e
+  api_url: https://dev.api.malevich.ai/
+  auth_path: api/v1/login/access-token
+  graphql_path: api/v1/graphql
+  host:
+    alias: null
+    conn_url: https://core.malevich.ai/
+  org: examples
+  password: secret#771708
+  token: null
+  username: zak@malevich.ai
+version: null
