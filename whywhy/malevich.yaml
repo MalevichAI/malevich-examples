@@ -2,14 +2,14 @@ dependencies:
 - whywhy:
     installer: space
     options:
-      branch: 3f10ef6ab27f421781faf0a5d5d3aa70
+      branch: 1882b4bf12e24d85b053774940c7ccff
       image_auth_pass: null
       image_auth_user: null
-      image_ref: public.ecr.aws/u6e1k0c7/whywhy:347b5234a84bf6b9109da6e814b1b856e342c0b5
+      image_ref: public.ecr.aws/o1z1g3t0/whywhy:71976f0395842a85b53b685079e52aec95eeb765
       reverse_id: whywhy.tools
-      version: 2acb65454c324e218e8cefd6fcfdc0df
+      version: 73ecb810083d4ec996f94cc9187783e6
     package_id: whywhy
-    version: 347b
+    version: 0.1.0
 preferences:
   log_format: RICH
   log_level: INFO
@@ -24,14 +24,14 @@ preferences:
 project_id: null
 space:
   api_gateway_path: /e
-  api_url: https://dev.api.malevich.ai
+  api_url: https://api.malevich.ai
   auth_path: /api/v1/login/access-token
   graphql_path: /api/v1/graphql
   host:
     alias: null
     conn_url: https://core.malevich.ai/
-  org: examples
-  password: secret#958268
+  org: null
+  password: secret#476701
   token: null
   username: zak@malevich.ai
 version: null
