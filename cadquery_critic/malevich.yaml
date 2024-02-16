@@ -1,0 +1,61 @@
+dependencies:
+- openai:
+    installer: space
+    options:
+      branch: e189e48002fc4e2c9b70ddc69cc0ebec
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/o1z1g3t0/openai_api:707a12ed5aff625dc17afa4b44225deaae947d7c
+      reverse_id: openai
+      version: bc5ef8d2d7554ba08e357f0190757d6b
+    package_id: openai
+    version: 707a
+- cadquery_execute:
+    installer: image
+    options:
+      checksum: 436904a0f7dffc9889312dcfc0d839368a2dbf797be3489e955fd14c3083b2a4
+      core_auth_token: null
+      core_auth_user: null
+      core_host: https://core.malevich.ai/
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: teexone/malevich:cad
+      operations: null
+    package_id: cadquery_execute
+    version: ''
+- utility:
+    installer: space
+    options:
+      branch: 08d6f70d9dbe4abe83740ece4685cbd4
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/o1z1g3t0/utility:707a12ed5aff625dc17afa4b44225deaae947d7c
+      reverse_id: utility
+      version: d727e6229d7445679f89e5cc6a4af4d1
+    package_id: utility
+    version: 707a
+preferences:
+  log_format: RICH
+  log_level: INFO
+  verbosity:
+    Installation: 0
+    Intrepretation: 0
+    Preparation: 1
+    Removal: 0
+    Results: 1
+    Run: 1
+    Stop: 0
+project_id: null
+space:
+  api_gateway_path: /e
+  api_url: https://api.malevich.ai
+  auth_path: /api/v1/login/access-token
+  graphql_path: /api/v1/graphql
+  host:
+    alias: null
+    conn_url: https://core.malevich.ai/
+  org: examples
+  password: secret#233027
+  token: null
+  username: zak@malevich.ai
+version: null

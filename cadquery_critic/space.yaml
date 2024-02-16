@@ -1,0 +1,13 @@
+cadquery:
+  name: Execute CadQuery 
+  description: Executes Python code with CadQuery and produces SVG images
+  visibility: 
+    - public
+  icon: component/example_cadquery.png
+  app:
+    container_ref: public.ecr.aws/o1z1g3t0/geohero
+    container_user: null
+    container_token: null
+  tags:
+    - Code Execution
+    - Example App
