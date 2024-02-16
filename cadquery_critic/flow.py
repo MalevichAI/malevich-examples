@@ -32,11 +32,7 @@ CRITIC_PROMPT = """
 @flow(reverse_id='cadquery_critic.round')
 def cadquery_critic():
     user_query = collection(
-
-        "CAD User Queries", alias='user_query',        df=table(
-                    [ ['sofa', '', '', '']], 
-                    columns=['user_query', 'previous_code', 'feedback', 'error_code']
-                ),
+        "CAD User Queries", alias='user_query'
     )
     
     
@@ -66,7 +62,6 @@ def cadquery_critic():
 
 
 if __name__ == '__main__':
-    
     from malevich import CoreInterpreter
     import argparse
     
@@ -80,31 +75,30 @@ if __name__ == '__main__':
     query = [args.query, '', '', '']
     os.makedirs(args.results_directory, exist_ok=True)
     task = cadquery_critic()
-    # task.interpret(CoreInterpreter(core_auth=('example', "Welcome to Malevich!")))
-    task.interpret()
-    # task.prepare()
-    # for i in range(args.rounds):
-    #     task.run(
-    #         run_id=str(i),
-    #         override={
-    #             'user_query': table(
-    #                 [query], 
-    #                 columns=['user_query', 'previous_code', 'feedback', 'error_code']
-    #             )
-    #         },
-    #         with_logs=True,
-    #         profile_mode='all'
-    #     )
+    task.interpret(CoreInterpreter(core_auth=('example', "Welcome to Malevich!")))
+    task.prepare()
+    for i in range(args.rounds):
+        task.run(
+            run_id=str(i),
+            override={
+                'user_query': table(
+                    [query], 
+                    columns=['user_query', 'previous_code', 'feedback', 'error_code']
+                )
+            },
+            with_logs=True,
+            profile_mode='all'
+        )
     
-    #     critic_response, exec_result = task.results(
-    #         run_id=str(i)
-    #     )
+        critic_response, exec_result = task.results(
+            run_id=str(i)
+        )
         
-    #     feedback = str(critic_response.get_df().iloc[0, 0])
-    #     error_code = str(exec_result.get_df().error_code.iloc[0])
-    #     previous_code = str(exec_result.get_df().code.iloc[0])
-    #     exec_result.get_df().to_csv(os.path.join(args.results_directory, f'output_{i}.csv'))
+        feedback = str(critic_response.get_df().iloc[0, 0])
+        error_code = str(exec_result.get_df().error_code.iloc[0])
+        previous_code = str(exec_result.get_df().code.iloc[0])
+        exec_result.get_df().to_csv(os.path.join(args.results_directory, f'output_{i}.csv'))
         
-    #     query = [args.query, previous_code, feedback, error_code]
+        query = [args.query, previous_code, feedback, error_code]
         
         
