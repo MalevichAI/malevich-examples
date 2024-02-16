@@ -131,7 +131,6 @@ def rival(
 if __name__ == '__main__':
     interpreter = SpaceInterpreter()
     
-
     f = rival(
         pd.read_csv('./datasets/queries.csv'),
         pd.read_csv('./datasets/company.csv'),
@@ -140,13 +139,13 @@ if __name__ == '__main__':
     )
     
     f.interpret(interpreter)
-    print("\n\nFlow is updated!!")
-    f.prepare()
-    f.run(with_logs=True, profile_mode='all')
-    f.stop()
-    results = f.results()
-    if isinstance(results, pd.DataFrame):
-        results.to_csv('results.csv')
-    else:
-        for i, r in enumerate(results):
-            r.to_csv(f'results_{i}.csv')
+    # print("\n\nFlow is updated!!")
+    # f.prepare()
+    # f.run(with_logs=True, profile_mode='all')
+    # f.stop()
+    # results = f.results()
+    # if isinstance(results, pd.DataFrame):
+    #     results.to_csv('results.csv')
+    # else:
+    #     for i, r in enumerate(results):
+    #         r.to_csv(f'results_{i}.csv')

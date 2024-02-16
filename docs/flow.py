@@ -133,3 +133,7 @@ if __name__ == '__main__':
         runner.wait()
     except KeyboardInterrupt:
         runner.stop()
+
+import malevich_coretools as mct
+
+mct.update_u

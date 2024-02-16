@@ -30,7 +30,7 @@ space:
   host:
     alias: null
     conn_url: https://core.malevich.ai/
-  org: null
+  org: examples
   password: secret#476701
   token: null
   username: zak@malevich.ai

@@ -10,19 +10,6 @@ dependencies:
       version: bc5ef8d2d7554ba08e357f0190757d6b
     package_id: openai
     version: 707a
-- cadquery_execute:
-    installer: image
-    options:
-      checksum: 436904a0f7dffc9889312dcfc0d839368a2dbf797be3489e955fd14c3083b2a4
-      core_auth_token: null
-      core_auth_user: null
-      core_host: https://core.malevich.ai/
-      image_auth_pass: null
-      image_auth_user: null
-      image_ref: teexone/malevich:cad
-      operations: null
-    package_id: cadquery_execute
-    version: ''
 - utility:
     installer: space
     options:
@@ -34,6 +21,17 @@ dependencies:
       version: d727e6229d7445679f89e5cc6a4af4d1
     package_id: utility
     version: 707a
+- cadquery:
+    installer: space
+    options:
+      branch: 3ad9836d853a48ff9bf0644049f3a22b
+      image_auth_pass: null
+      image_auth_user: null
+      image_ref: public.ecr.aws/o1z1g3t0/cadquery_critic:75060b2b0618f8d392f7f6ab72ef56d9cd9fd577
+      reverse_id: cadquery
+      version: d627abc59aa24951b47e33fe39a51f37
+    package_id: cadquery
+    version: '7506'
 preferences:
   log_format: RICH
   log_level: INFO

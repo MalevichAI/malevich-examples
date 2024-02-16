@@ -13,7 +13,7 @@ from malevich.ultralytics import detect
 from malevich.utility import add_column, locs, merge_two, rename, squash
 
 
-@flow(reverse_id='examples.duolingo', name='Duoling: Tell a story about what I see')
+@flow(reverse_id='duolingo', name='Duolingo: Tell a story about what I see')
 def duolingo(
     file: str,
     classes: dict,
@@ -25,7 +25,7 @@ def duolingo(
     # Create a collection
     # for the images stored on drive
     files = collection(
-        name='Duolingo Images',
+        name='Duolingo images',
         # Only one file is stored
         df=pd.DataFrame({
             'link': [file],
@@ -40,7 +40,7 @@ def duolingo(
     # that stores a code
     # for the target language
     language = rename(collection(
-        name='Duolingo Language',
+        name='Duolingo language',
         df=pd.DataFrame({
             'to_language': [target_language],
         })
@@ -127,11 +127,4 @@ if __name__ == '__main__':
         prompt=prompt,
     )
 
-    task.interpret(CoreInterpreter(
-        core_auth=('leo', 'pak')
-    ))
-
-    task.prepare()
-    task.run()
-    task.stop()
-    print(task.results())
+    task.interpret()

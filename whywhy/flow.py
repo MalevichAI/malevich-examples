@@ -1,7 +1,6 @@
 import os
 
-from malevich import flow, collection, run
-from malevich.interpreter.core import CoreInterpreter
+from malevich import flow, collection, run, SpaceInterpreter, CoreInterpreter
 from malevich.whywhy import *
 
 sources_ =  "./data/rss_feed_sample.csv"
@@ -15,7 +14,7 @@ def feed_preloader(sources):
     return article_body
 
 
-@flow(reverse_id='whywhy.newsletter.facts.subflow', name="Facts Newsletter")
+@flow(reverse_id='whywhy.newsletter.facts', name="Facts Newsletter")
 def facts_newsletter():
     sources = collection(file=sources_, name="whywhy.sources")
     recipients = collection(file=recipients_, name="whywhy.recipients")
@@ -58,3 +57,6 @@ def facts_newsletter():
 
 if __name__ == "__main__":
     task = facts_newsletter()
+    interpreter = SpaceInterpreter()
+    interpreter.supports_subtrees = False
+    task.interpret(interpreter)
